@@ -1,3 +1,5 @@
+//jshint esversion:6
+
 const express= require('express');
 const bodyParser= require('body-parser');
 
@@ -6,16 +8,19 @@ const app= express();
 
 app.get('/',function(req,res){
 
+  res.setHeader('Content-Type', 'text/html');
+
 var today= new Date();
 
 if(today.getDay()===6||today.getDay()===0){
-  res.write('Its the weekend yahhh');
+
+  res.write("<h1>Its the weekend yahhh</h1>");
 }else{
-  res.write('Its the weekday');
+  res.write('<h2>Its the weekday</h2>');
 }
 res.write("\n Today is : " + today);
 res.send();
-res.end();
+
 })
 //create server
 app.listen('3000',function(){
