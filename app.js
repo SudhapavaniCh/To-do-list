@@ -36,13 +36,10 @@ switch (currentDay) {
       break;
     default:
       day="Not a day";
-
 }
-
-res.render("lists", {dayToday:day, completeDay:today});
+res.render("lists", {dayToday:day});
 });
-
-
+//completeDay:today, this is the json object to sent back todays date with day and time as well
 //create server
 app.listen('3000',function(){
   console.log('Server is listening at port 3000');

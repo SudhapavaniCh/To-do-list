@@ -5,7 +5,14 @@
     <title>To do list</title>
   </head>
   <body>
-  <h1>Today is <%=dayToday%> and its <%=completeDay %></h1>
+
+
+  <% if(dayToday==="Wednesday"){ %>
+     <h1 style="color:Purple"> <%=dayToday%> To do list</h1>
+  <% }else{ %>
+     <h1 style="color:blue"> <%=dayToday%> To do list</h1>
+  <% } %>
+
 
   </body>
 </html>
